@@ -1,0 +1,103 @@
+/* style.css - Enhanced for Coffee Menu */
+
+/* General page setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f7f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Container for all content */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Menu grid layout */
+#menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Image settings */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Text area */
+.card .content {
+  padding: 1rem;
+  flex: 1;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.card p {
+  margin: 0.25rem 0;
+}
+
+/* Button */
+.card button {
+  background-color: #10b981; /* green-600 */
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.card button:hover {
+  background-color: #059669; /* green-700 */
+}
+
+/* Cart styling */
+#cartList li {
+  margin-bottom: 0.5rem;
+}
+
+/* Customer form styling */
+#customerFormContainer input {
+  outline: none;
+  border: 1px solid #ccc;
+  transition: border 0.2s ease;
+}
+
+#customerFormContainer input:focus {
+  border-color: #10b981;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .card img {
+    height: 150px;
+  }
+}
